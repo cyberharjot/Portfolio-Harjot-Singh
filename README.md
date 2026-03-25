@@ -11,4 +11,4 @@ More projects and backend features will be added soon.
 - JavaScript
 
 ## Live Demo
-View Portfolio - https://cyberharjot.github.io/Portfolio-Harjot-Singh
+[View Portfolio](https://cyberharjot.github.io/Portfolio-Harjot-Singh)
