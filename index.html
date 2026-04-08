@@ -3,321 +3,510 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Harjot Singh — Cybersecurity enthusiast, ethical hacking learner, and developer building secure, modern digital experiences." />
-  <meta name="theme-color" content="#050816" />
-
+  <meta name="description" content="Harjot Singh — cybersecurity enthusiast, ethical hacking learner, and developer." />
+  <meta name="theme-color" content="#05070f" />
   <title>Harjot Singh | Cybersecurity Portfolio</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Remix Icon -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Rajdhani:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="bg-orb orb-1"></div>
-  <div class="bg-orb orb-2"></div>
-  <div class="bg-orb orb-3"></div>
   <div class="noise"></div>
   <div class="grid-overlay"></div>
+  <div class="orb orb-a"></div>
+  <div class="orb orb-b"></div>
+  <div class="orb orb-c"></div>
 
-  <header class="header">
-    <nav class="nav">
-      <a class="brand" href="#home" aria-label="Go to home">
-        <span class="brand-prompt">root@</span><span class="brand-name">harjot</span><span class="brand-cursor">_</span>
+  <header class="topbar">
+    <div class="brand">
+      <a href="#home" class="brand-link" aria-label="Go to home">
+        <span class="brand-root">root@</span><span class="brand-name">harjot</span><span class="brand-cursor">_</span>
       </a>
+      <span class="brand-sub">cybersecurity • developer • learner</span>
+    </div>
 
-      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+    <nav class="nav-panel" id="navPanel" aria-label="Primary navigation">
+      <a href="#home" class="nav-item active" data-section="home"><i class="ri-home-4-line"></i><span>Home</span></a>
+      <a href="#about" class="nav-item" data-section="about"><i class="ri-user-3-line"></i><span>About</span></a>
+      <a href="#skills" class="nav-item" data-section="skills"><i class="ri-code-box-line"></i><span>Skills</span></a>
+      <a href="#projects" class="nav-item" data-section="projects"><i class="ri-layout-masonry-line"></i><span>Projects</span></a>
+      <a href="#experience" class="nav-item" data-section="experience"><i class="ri-briefcase-4-line"></i><span>Experience</span></a>
+      <a href="#certifications" class="nav-item" data-section="certifications"><i class="ri-award-line"></i><span>Certifications</span></a>
+      <a href="#contact" class="nav-item" data-section="contact"><i class="ri-mail-line"></i><span>Contact</span></a>
+    </nav>
+
+    <div class="topbar-meta">
+      <span class="section-chip" id="sectionChip">
+        <i class="ri-focus-3-line"></i>
+        <span>Home</span>
+      </span>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navPanel">
         <i class="ri-menu-3-line"></i>
       </button>
-
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-    </nav>
+    </div>
   </header>
 
   <main>
-    <!-- HERO -->
-    <section class="hero" id="home">
-      <div class="hero-copy reveal">
-        <div class="eyebrow">
-          <span class="eyebrow-dot"></span>
-          Cybersecurity Portfolio
-        </div>
-
-        <p class="hero-intro">Hey there, I’m</p>
-        <h1 class="hero-title">Harjot Singh</h1>
-
-        <div class="typing-wrap" aria-live="polite">
-          <span class="typing-label">•</span>
-          <span id="typing" class="typing-text"></span>
-          <span class="typing-caret"></span>
-        </div>
-
-        <p class="hero-text">
-          I build with a security-first mindset — exploring systems, learning vulnerabilities, and turning curiosity into practical projects.
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">
-            <i class="ri-shield-keyhole-line"></i>
-            View Projects
-          </a>
-          <a class="btn btn-secondary" href="mailto:cyberharjot@gmail.com">
-            <i class="ri-mail-line"></i>
-            Contact Me
-          </a>
-        </div>
-
-        <div class="hero-stats">
-          <div class="stat-card">
-            <span class="stat-value">Security</span>
-            <span class="stat-label">Focused learning</span>
+    <section class="section hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            Building secure systems. Learning the hard way. Showing the work.
           </div>
-          <div class="stat-card">
-            <span class="stat-value">Build</span>
-            <span class="stat-label">Hands-on projects</span>
+
+          <p class="hero-kicker">Hello, I’m</p>
+          <h1 class="hero-title">Harjot Singh</h1>
+
+          <div class="role-line" aria-live="polite">
+            <span class="role-bullet">•</span>
+            <span id="typing" class="typing"></span>
+            <span class="caret"></span>
           </div>
-          <div class="stat-card">
-            <span class="stat-value">Code</span>
-            <span class="stat-label">Python • C++ • Java</span>
+
+          <p class="hero-summary">
+            I focus on cybersecurity, secure development, and practical learning. I like understanding how systems fail, how attackers think, and how to build software that is harder to break.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects"><i class="ri-shield-keyhole-line"></i>Projects</a>
+            <a class="btn btn-secondary" href="#contact"><i class="ri-mail-line"></i>Contact</a>
+            <a class="btn btn-secondary" href="#experience"><i class="ri-briefcase-4-line"></i>Experience</a>
+          </div>
+
+          <div class="quick-metrics">
+            <div class="metric">
+              <span class="metric-value">Focus</span>
+              <span class="metric-label">Cybersecurity and secure development</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">Build</span>
+              <span class="metric-label">Practical tools, labs, and web projects</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">Tools</span>
+              <span class="metric-label">Python • C++ • Java • Nmap • Burp Suite</span>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="hero-visual reveal">
-        <div class="profile-card">
-          <div class="profile-top">
-            <div class="avatar-ring">
-              <div class="avatar">
-                HS
+        <aside class="hero-card reveal">
+          <div class="profile-shell">
+            <div class="profile-photo-wrap">
+              <div class="profile-photo-frame">
+                <img src="images/profile.jpg" alt="Harjot Singh portrait" class="profile-photo" loading="eager">
+              </div>
+
+              <div class="profile-tag">
+                <span class="status-dot"></span>
+                Cybersecurity enthusiast
               </div>
             </div>
 
-            <div class="status-chip">
-              <span class="status-pulse"></span>
-              Cybersecurity Enthusiast
+            <div class="terminal-card">
+              <div class="terminal-top"><span></span><span></span><span></span></div>
+              <div class="terminal-body">
+                <p><span class="prompt">root@harjot:~$</span> whoami</p>
+                <p class="output">Harjot Singh</p>
+
+                <p><span class="prompt">root@harjot:~$</span> cat focus.txt</p>
+                <p class="output">Cybersecurity • Secure Development • Hands-on Learning</p>
+
+                <p><span class="prompt">root@harjot:~$</span> ls strengths/</p>
+                <p class="output">Problem Solving  Web Basics  Networking  Linux  Python  Burp Suite</p>
+              </div>
             </div>
+
+            <div class="floating-chip chip-a"><i class="ri-terminal-box-line"></i></div>
+            <div class="floating-chip chip-b"><i class="ri-shield-line"></i></div>
+            <div class="floating-chip chip-c"><i class="ri-code-s-slash-line"></i></div>
+            <div class="floating-chip chip-d"><i class="ri-bug-line"></i></div>
           </div>
+        </aside>
+      </div>
 
-          <div class="terminal">
-            <div class="terminal-bar">
-              <span></span><span></span><span></span>
+      <a class="scroll-hint" href="#about" aria-label="Scroll to about section">
+        <span></span>
+        <i class="ri-arrow-down-line"></i>
+      </a>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker"><i class="ri-user-3-line"></i> About</p>
+          <h2 class="section-title">A security-first mind with a builder’s habit.</h2>
+          <p class="section-subtitle">
+            I like learning by doing: reading how something works, testing where it fails, and then building it back better.
+          </p>
+        </div>
+
+        <div class="about-layout">
+          <article class="info-card large-card reveal">
+            <div class="card-title">
+              <i class="ri-focus-3-line"></i>
+              <h3>What I do</h3>
             </div>
+            <p>
+              I study cybersecurity with a practical approach. That means I spend time learning system behavior, exploring vulnerabilities in safe environments, and building small tools that help me understand security better. I also keep improving my development skills so I can build software that is clean, useful, and harder to break.
+            </p>
+          </article>
 
-            <div class="terminal-body">
-              <p><span class="prompt">root@harjot:~$</span> whoami</p>
-              <p><span class="output">Harjot Singh</span></p>
-              <p><span class="prompt">root@harjot:~$</span> cat focus.txt</p>
-              <p class="output">Ethical Hacking • Web Security • Secure Development</p>
-              <p><span class="prompt">root@harjot:~$</span> ls skills/</p>
-              <p class="output">Python  C++  Java  HTML  CSS  JavaScript  Nmap  Wireshark  Burp Suite</p>
+          <article class="info-card reveal">
+            <div class="card-title">
+              <i class="ri-shield-keyhole-line"></i>
+              <h3>Security mindset</h3>
             </div>
-          </div>
+            <p>
+              Ethical hacking basics, vulnerability research, and safer software thinking.
+            </p>
+          </article>
 
-          <div class="orbit orbit-1"><i class="ri-code-s-slash-line"></i></div>
-          <div class="orbit orbit-2"><i class="ri-shield-line"></i></div>
-          <div class="orbit orbit-3"><i class="ri-terminal-box-line"></i></div>
-          <div class="orbit orbit-4"><i class="ri-bug-line"></i></div>
+          <article class="info-card reveal">
+            <div class="card-title">
+              <i class="ri-tools-line"></i>
+              <h3>Tools I use</h3>
+            </div>
+            <p>
+              Nmap, Wireshark, Burp Suite, Metasploit, Linux, and code editors for labs and practice.
+            </p>
+          </article>
+
+          <article class="info-card reveal">
+            <div class="card-title">
+              <i class="ri-lightbulb-flash-line"></i>
+              <h3>Learning style</h3>
+            </div>
+            <p>
+              I learn best through experiments, mini-projects, labs, and fixing real bugs in small steps.
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section class="section" id="about">
-      <div class="section-heading reveal">
-        <p class="section-kicker">About</p>
-        <h2 class="section-title">Security-minded, design-aware, and always building.</h2>
-        <p class="section-subtitle">
-          A clean presentation matters, but so does clarity. This section keeps the message direct and recruiter-friendly.
-        </p>
-      </div>
-
-      <div class="about-grid">
-        <article class="glass-card reveal">
-          <h3><i class="ri-focus-3-line"></i> What I do</h3>
-          <p>
-            I’m a cybersecurity enthusiast passionate about learning systems, exploring vulnerabilities, and understanding how modern software behaves under pressure.
-            I enjoy building and experimenting with security tools while growing as a well-rounded developer.
-          </p>
-        </article>
-
-        <article class="glass-card reveal">
-          <h3><i class="ri-stack-line"></i> What I work with</h3>
-          <ul class="check-list">
-            <li>Ethical hacking fundamentals and security concepts</li>
-            <li>Tools such as Nmap, Wireshark, Burp Suite, and Metasploit</li>
-            <li>Programming in Python, C++, Java, HTML, CSS, and JavaScript</li>
-            <li>Continuous learning in AI and modern technologies</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
     <section class="section" id="skills">
-      <div class="section-heading reveal">
-        <p class="section-kicker">Skills</p>
-        <h2 class="section-title">Built like a control panel, not a pile of badges.</h2>
-        <p class="section-subtitle">
-          Skills are grouped to feel structured, polished, and easy to scan.
-        </p>
-      </div>
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker"><i class="ri-code-box-line"></i> Skills</p>
+          <h2 class="section-title">Tools, languages, and security basics I actually use.</h2>
+          <p class="section-subtitle">
+            Straightforward, practical, and ready for projects, labs, and portfolio work.
+          </p>
+        </div>
 
-      <div class="skills-grid">
-        <article class="skill-card reveal">
-          <div class="card-icon"><i class="ri-code-box-line"></i></div>
-          <h3>Programming</h3>
-          <div class="tag-cloud">
-            <span>Python</span>
-            <span>C++</span>
-            <span>Java</span>
-          </div>
-        </article>
+        <div class="skills-layout">
+          <article class="skill-card reveal">
+            <div class="skill-head">
+              <div class="skill-icon"><i class="ri-code-s-slash-line"></i></div>
+              <div>
+                <h3>Programming</h3>
+                <p>Languages I use for automation, logic, and building small tools.</p>
+              </div>
+            </div>
+            <div class="pill-row">
+              <span>Python</span>
+              <span>C++</span>
+              <span>Java</span>
+            </div>
+          </article>
 
-        <article class="skill-card reveal">
-          <div class="card-icon"><i class="ri-global-line"></i></div>
-          <h3>Web</h3>
-          <div class="tag-cloud">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-          </div>
-        </article>
+          <article class="skill-card reveal">
+            <div class="skill-head">
+              <div class="skill-icon"><i class="ri-global-line"></i></div>
+              <div>
+                <h3>Web</h3>
+                <p>Frontend basics for portfolio work and secure web experimentation.</p>
+              </div>
+            </div>
+            <div class="pill-row">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </article>
 
-        <article class="skill-card reveal">
-          <div class="card-icon"><i class="ri-shield-keyhole-line"></i></div>
-          <h3>Cybersecurity</h3>
-          <div class="tag-cloud">
-            <span>Network Security</span>
-            <span>Linux Systems</span>
-            <span>Vulnerability Assessment</span>
-            <span>Penetration Testing</span>
-          </div>
-        </article>
+          <article class="skill-card reveal">
+            <div class="skill-head">
+              <div class="skill-icon"><i class="ri-shield-star-line"></i></div>
+              <div>
+                <h3>Cybersecurity</h3>
+                <p>Core topics I keep practicing in labs and through self-study.</p>
+              </div>
+            </div>
+            <div class="pill-row">
+              <span>Network Security</span>
+              <span>Linux</span>
+              <span>Vulnerability Assessment</span>
+              <span>Basic Pentesting</span>
+            </div>
+          </article>
 
-        <article class="skill-card reveal">
-          <div class="card-icon"><i class="ri-tools-line"></i></div>
-          <h3>Security Tools</h3>
-          <div class="tag-cloud">
-            <span>Nmap</span>
-            <span>Wireshark</span>
-            <span>Burp Suite</span>
-            <span>Metasploit</span>
-          </div>
-        </article>
+          <article class="skill-card reveal">
+            <div class="skill-head">
+              <div class="skill-icon"><i class="ri-bug-2-line"></i></div>
+              <div>
+                <h3>Security Tools</h3>
+                <p>Tools I rely on when testing, exploring, and learning.</p>
+              </div>
+            </div>
+            <div class="pill-row">
+              <span>Nmap</span>
+              <span>Wireshark</span>
+              <span>Burp Suite</span>
+              <span>Metasploit</span>
+              <span>Linux Terminal</span>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
     <section class="section" id="projects">
-      <div class="section-heading reveal">
-        <p class="section-kicker">Projects</p>
-        <h2 class="section-title">Featured work with a premium case-study feel.</h2>
-        <p class="section-subtitle">
-          Clean cards, strong hierarchy, and better storytelling for each project.
-        </p>
-      </div>
-
-      <div class="projects-grid">
-        <article class="project-card reveal">
-          <div class="project-top">
-            <span class="project-index">01</span>
-            <i class="ri-shield-check-line project-icon"></i>
-          </div>
-          <h3>Password Strength Checker</h3>
-          <p>
-            Analyzes password strength using modern security rules and helps users create safer passwords.
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker"><i class="ri-layout-masonry-line"></i> Projects</p>
+          <h2 class="section-title">Projects that show the way you think.</h2>
+          <p class="section-subtitle">
+            These are strong starter projects for a cybersecurity portfolio. You can build them and replace the placeholders with live links later.
           </p>
-          <div class="project-tags">
-            <span>Security</span><span>Validation</span><span>UX</span>
-          </div>
-          <div class="project-links">
-            <a href="#" target="_blank" rel="noreferrer"><i class="ri-external-link-line"></i> View</a>
-            <a href="#" target="_blank" rel="noreferrer"><i class="ri-github-line"></i> GitHub</a>
-          </div>
-        </article>
+        </div>
 
-        <article class="project-card reveal">
-          <div class="project-top">
-            <span class="project-index">02</span>
-            <i class="ri-lock-password-line project-icon"></i>
-          </div>
-          <h3>Password Generator</h3>
-          <p>
-            Generates strong random passwords with customizable options to support better account security.
-          </p>
-          <div class="project-tags">
-            <span>Generator</span><span>Randomization</span><span>Utility</span>
-          </div>
-          <div class="project-links">
-            <a href="#" target="_blank" rel="noreferrer"><i class="ri-external-link-line"></i> View</a>
-            <a href="#" target="_blank" rel="noreferrer"><i class="ri-github-line"></i> GitHub</a>
-          </div>
-        </article>
+        <div class="projects-layout">
+          <article class="project-card reveal">
+            <div class="project-top">
+              <span class="project-index">01</span>
+              <i class="ri-shield-check-line"></i>
+            </div>
+            <h3>Password Strength Checker</h3>
+            <p>
+              Checks password quality, explains weak patterns, and suggests stronger alternatives.
+            </p>
+            <div class="project-tags">
+              <span>Security</span><span>Validation</span><span>UX</span>
+            </div>
+            <div class="project-links">
+              <a href="#"><i class="ri-external-link-line"></i>Demo</a>
+              <a href="#"><i class="ri-github-line"></i>Code</a>
+            </div>
+          </article>
 
-        <article class="project-card reveal">
-          <div class="project-top">
-            <span class="project-index">03</span>
-            <i class="ri-bug-2-line project-icon"></i>
-          </div>
-          <h3>Brute Force Simulation</h3>
-          <p>
-            An educational simulation that demonstrates brute-force attack logic in a safe learning environment.
-          </p>
-          <div class="project-tags">
-            <span>Education</span><span>Simulation</span><span>Logic</span>
-          </div>
-          <div class="project-links">
-            <a href="#" target="_blank" rel="noreferrer"><i class="ri-external-link-line"></i> View</a>
-            <a href="#" target="_blank" rel="noreferrer"><i class="ri-github-line"></i> GitHub</a>
-          </div>
-        </article>
+          <article class="project-card reveal">
+            <div class="project-top">
+              <span class="project-index">02</span>
+              <i class="ri-lock-password-line"></i>
+            </div>
+            <h3>Password Generator</h3>
+            <p>
+              Generates strong passwords with length, character, and copy-to-clipboard options.
+            </p>
+            <div class="project-tags">
+              <span>Utility</span><span>Randomization</span><span>Frontend</span>
+            </div>
+            <div class="project-links">
+              <a href="#"><i class="ri-external-link-line"></i>Demo</a>
+              <a href="#"><i class="ri-github-line"></i>Code</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-top">
+              <span class="project-index">03</span>
+              <i class="ri-bug-line"></i>
+            </div>
+            <h3>Brute Force Simulation</h3>
+            <p>
+              A safe learning demo that shows how brute-force attacks work and why rate limits matter.
+            </p>
+            <div class="project-tags">
+              <span>Education</span><span>Simulation</span><span>Logic</span>
+            </div>
+            <div class="project-links">
+              <a href="#"><i class="ri-external-link-line"></i>Demo</a>
+              <a href="#"><i class="ri-github-line"></i>Code</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-top">
+              <span class="project-index">04</span>
+              <i class="ri-search-eye-line"></i>
+            </div>
+            <h3>Port Scanner</h3>
+            <p>
+              A simple scanner that checks open ports and helps understand basic network exposure.
+            </p>
+            <div class="project-tags">
+              <span>Networking</span><span>Python</span><span>Security</span>
+            </div>
+            <div class="project-links">
+              <a href="#"><i class="ri-external-link-line"></i>Demo</a>
+              <a href="#"><i class="ri-github-line"></i>Code</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-top">
+              <span class="project-index">05</span>
+              <i class="ri-file-search-line"></i>
+            </div>
+            <h3>Log Analyzer</h3>
+            <p>
+              Reads log files, highlights suspicious patterns, and makes basic incident review easier.
+            </p>
+            <div class="project-tags">
+              <span>Analysis</span><span>Automation</span><span>Python</span>
+            </div>
+            <div class="project-links">
+              <a href="#"><i class="ri-external-link-line"></i>Demo</a>
+              <a href="#"><i class="ri-github-line"></i>Code</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-top">
+              <span class="project-index">06</span>
+              <i class="ri-shield-flash-line"></i>
+            </div>
+            <h3>Vulnerability Notes</h3>
+            <p>
+              A write-up style project with common web issues, examples, and defensive lessons.
+            </p>
+            <div class="project-tags">
+              <span>Web Security</span><span>Notes</span><span>Learning</span>
+            </div>
+            <div class="project-links">
+              <a href="#"><i class="ri-external-link-line"></i>Demo</a>
+              <a href="#"><i class="ri-github-line"></i>Code</a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section class="section" id="contact">
-      <div class="section-heading reveal">
-        <p class="section-kicker">Contact</p>
-        <h2 class="section-title">Simple, direct, and easy to reach.</h2>
-        <p class="section-subtitle">
-          A recruiter should find everything in seconds.
-        </p>
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker"><i class="ri-briefcase-4-line"></i> Experience</p>
+          <h2 class="section-title">Training, participation, and real practice.</h2>
+          <p class="section-subtitle">
+            This section makes your profile feel real. Add anything you have done, even if it is training, internship-style work, or event participation.
+          </p>
+        </div>
+
+        <div class="timeline-layout">
+          <article class="timeline-card reveal">
+            <span class="timeline-line"></span>
+            <div class="timeline-head">
+              <span class="timeline-year">45 Days</span>
+              <h3>Training at Future Finders, Mohali</h3>
+            </div>
+            <p>
+              Hands-on training experience focused on learning, practical exposure, and workplace discipline.
+            </p>
+          </article>
+
+          <article class="timeline-card reveal">
+            <span class="timeline-line"></span>
+            <div class="timeline-head">
+              <span class="timeline-year">Hackathon</span>
+              <h3>GNA University Hackathon 4.0</h3>
+            </div>
+            <p>
+              Participated in a university hackathon and worked in a fast-paced problem-solving environment.
+            </p>
+          </article>
+
+          <article class="timeline-card reveal">
+            <span class="timeline-line"></span>
+            <div class="timeline-head">
+              <span class="timeline-year">Ongoing</span>
+              <h3>Security labs and self-learning</h3>
+            </div>
+            <p>
+              Regular practice with Linux, networking, tools, and small security experiments to build real confidence.
+            </p>
+          </article>
+        </div>
       </div>
+    </section>
 
-      <div class="contact-grid">
-        <article class="contact-card reveal">
-          <i class="ri-mail-line"></i>
-          <p class="contact-label">Email</p>
-          <a href="mailto:cyberharjot@gmail.com">cyberharjot@gmail.com</a>
-        </article>
+    <section class="section" id="certifications">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker"><i class="ri-award-line"></i> Certifications</p>
+          <h2 class="section-title">A place for training certificates and proof of work.</h2>
+          <p class="section-subtitle">
+            My training certificates, hackathon certificates, and any future course completion will be here.
+          </p>
+        </div>
 
-        <article class="contact-card reveal">
-          <i class="ri-github-line"></i>
-          <p class="contact-label">GitHub</p>
-          <a href="https://github.com/cyberharjot" target="_blank" rel="noreferrer">github.com/cyberharjot</a>
-        </article>
+        <div class="cert-layout">
+          <article class="cert-card reveal">
+            <i class="ri-medal-line"></i>
+            <h3>Training certificate</h3>
+            <p>
+              Use this card for the 45-day Future Finders training certificate.
+            </p>
+          </article>
 
-        <article class="contact-card reveal">
-          <i class="ri-linkedin-box-line"></i>
-          <p class="contact-label">LinkedIn</p>
-          <a href="https://www.linkedin.com/in/cyberharjot" target="_blank" rel="noreferrer">linkedin.com/in/cyberharjot</a>
-        </article>
+          <article class="cert-card reveal">
+            <i class="ri-trophy-line"></i>
+            <h3>Hackathon certificate</h3>
+            <p>
+              Use this card for your GNA University hackathon participation certificate.
+            </p>
+          </article>
 
-        <article class="contact-card reveal">
-          <i class="ri-map-pin-line"></i>
-          <p class="contact-label">Location</p>
-          <span>Jalandhar, Punjab, India</span>
-        </article>
+          <article class="cert-card reveal cert-empty">
+            <i class="ri-file-list-3-line"></i>
+            <h3>Future certificates</h3>
+            <p>
+              Keep this space ready for cybersecurity courses, labs, badges, and future achievements.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker"><i class="ri-mail-line"></i> Contact</p>
+          <h2 class="section-title">Easy ways to reach me.</h2>
+          <p class="section-subtitle">
+            Keep this section direct. A recruiter should be able to contact you in one click.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+          <article class="contact-card reveal">
+            <i class="ri-mail-line"></i>
+            <h3>Email</h3>
+            <a href="mailto:cyberharjot@gmail.com">cyberharjot@gmail.com</a>
+          </article>
+
+          <article class="contact-card reveal">
+            <i class="ri-github-line"></i>
+            <h3>GitHub</h3>
+            <a href="https://github.com/cyberharjot" target="_blank" rel="noreferrer">github.com/cyberharjot</a>
+          </article>
+
+          <article class="contact-card reveal">
+            <i class="ri-linkedin-box-line"></i>
+            <h3>LinkedIn</h3>
+            <a href="https://www.linkedin.com/in/cyberharjot" target="_blank" rel="noreferrer">linkedin.com/in/cyberharjot</a>
+          </article>
+
+          <article class="contact-card reveal">
+            <i class="ri-map-pin-line"></i>
+            <h3>Location</h3>
+            <span>Jalandhar, Punjab, India</span>
+          </article>
+        </div>
       </div>
     </section>
   </main>
@@ -327,7 +516,7 @@
     <p class="footer-sub">Cybersecurity Enthusiast • Always Learning</p>
   </footer>
 
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <button class="back-top" id="backTop" aria-label="Back to top">
     <i class="ri-arrow-up-line"></i>
   </button>
 
